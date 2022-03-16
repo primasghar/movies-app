@@ -1,0 +1,21 @@
+.nav {
+  margin: 0 10px;
+}
+.headline {
+  font-weight: bold;
+}
+
+.list {
+  list-style: none;
+  padding-left: 10px;
+}
+
+li {
+  border: 1px solid rgb(18, 18, 119);
+  border-radius: 5px;
+  padding: 0 16px;
+}
+
+.active {
+  color: white;
+}

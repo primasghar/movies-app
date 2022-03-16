@@ -5,23 +5,49 @@ import classes from "./SideNav.module.css";
 
 const SideNav = () => {
   return (
-    <div>
-      <ul>
+    <div className={classes.nav}>
+      <span className={classes.headline}>Movies Nav</span>
+      <ul className={classes.list}>
         <li>
-          <NavLink to="/">New Release</NavLink>
+          <NavLink
+            className={(navData) => (navData.isActive ? classes.active : "")}
+            to="/"
+          >
+            New Release
+          </NavLink>
         </li>
         <li>
-          <NavLink to="comingsoon">Coming soon</NavLink>
+          <NavLink
+            className={(navData) => (navData.isActive ? classes.active : "")}
+            to="comingsoon"
+          >
+            Coming soon
+          </NavLink>
         </li>
         <li>
-          <NavLink to="popularmovies">Popular Movies</NavLink>
+          <NavLink
+            className={(navData) => (navData.isActive ? classes.active : "")}
+            to="popularmovies"
+          >
+            Popular Movies
+          </NavLink>
         </li>
         <li>
-          <NavLink to="toprated">Top Rated</NavLink>
+          <NavLink
+            className={(navData) => (navData.isActive ? classes.active : "")}
+            to="toprated"
+          >
+            Top Rated
+          </NavLink>
         </li>
 
         <li>
-          <NavLink to="popularpeople">Popular People</NavLink>
+          <NavLink
+            className={(navData) => (navData.isActive ? classes.active : "")}
+            to="popularpeople"
+          >
+            Popular People
+          </NavLink>
         </li>
       </ul>
     </div>
