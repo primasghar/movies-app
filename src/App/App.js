@@ -9,14 +9,16 @@ import PopularMovies from "../PopularMovies";
 import PopularPeople from "../PopularPeople";
 import TopRated from "../TopRated";
 
+import classes from "./App.module.css";
+
 const App = () => {
   return (
-    <div>
-      <section>
+    <div className={classes.App}>
+      <section className={classes.sec_1}>
         <SideNav />
       </section>
-      <section>
-        <Header />
+      <section className={classes.sec_2}>
+        <Header className={classes.search} />
 
         <Routes>
           <Route path="/" element={<NewRelease />} />
