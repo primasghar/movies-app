@@ -1,5 +1,5 @@
 .nav {
-  margin: 0 10px;
+  margin: 0px;
 }
 .headline {
   font-weight: bold;
@@ -7,15 +7,26 @@
 
 .list {
   list-style: none;
-  padding-left: 10px;
+  padding: 0px;
 }
 
-li {
-  border: 1px solid rgb(18, 18, 119);
-  border-radius: 5px;
-  padding: 0 16px;
+.nav .active {
+  background-color: #edf2fb;
+  color: #012a4a;
 }
-
-.active {
+.nav a {
   color: white;
+  text-decoration: none;
+  padding: 15px 60px;
+  transition: 0.3s;
+  display: block;
+}
+a:active,
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: #012a4a;
+  background-color: #edf2fb;
 }
