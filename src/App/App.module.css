@@ -1,25 +1,24 @@
-.App {
+.app {
   background-color: #74bdcb; /*Aquamarine */
   display: flex;
-  justify-content: left;
-  max-width: 1000px;
-  padding: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
+  max-width: 1500px;
+  height: 100vh;
   margin: 0 auto;
 }
 
 .sec_1 {
-  background-color: #2e8bc0;
-  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  border-radius: 14px; */
+  background-color: #012a4a;
 }
 
 .sec_2 {
   flex-grow: 2;
   align-content: center;
+  background-color: #edf2fb;
+}
+
+.main {
+  padding: 15px;
 }
 
 .search {
-  background-color: #2e8bc0;
 }
