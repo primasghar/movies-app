@@ -1,22 +1,27 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-import test from "../Images/test.jpg";
+import test from "../../assets/images/test.jpg";
 import classes from "./MovieItem.module.css";
 
-const MovieItem = (title, rating, handledetail) => {
+const MovieItem = ({ movieData, handledetail }) => {
   return (
-    <li>
-      <div>
-        <img src={test} alt={"movie poster"} />
-        <div className={classes.genra}>
-          <span className={classes.title}>{title}</span>
-          <span className={classes.rating}>{rating}</span>
-        </div>
+    <div>
+      <Link to={`/moviedetail/${movieData.id}`}>
+        <img
+          src={test}
+          alt="poster"
+          width={200}
+          height={150}
+          onClick={handledetail}
+        />
+      </Link>
+
+      <div className={classes.genre}>
+        <span className={classes.title}>{movieData.title}</span>
+        <span className={classes.rating}>{movieData.rating}</span>
       </div>
-      <div className={classes.actions}>
-        <button onClick={handledetail}>view detail</button>
-      </div>
-    </li>
+    </div>
   );
 };
 
