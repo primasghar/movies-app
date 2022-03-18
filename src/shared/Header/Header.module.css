@@ -1,7 +1,15 @@
 .movieSearch {
-  background-color: #2e8bc0;
-  display: flex;
-  justify-content: center;
-  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  border-radius: 14px; */
+  background-color: #012a4a;
+  text-align: center;
+  height: 68px;
+  line-height: 68px;
+}
+
+.searchBox {
+  padding: 10px;
+  width: 50%;
+}
+
+.btn {
+  height: 40px;
 }

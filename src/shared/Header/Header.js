@@ -4,10 +4,17 @@ import classes from "./Header.module.css";
 
 const Header = () => {
   return (
-    <form className={classes.movieSearch}>
-      <input type="search" id="search" placeholder="movie name"></input>
-      <button className={classes.btn}>Search</button>
-    </form>
+    <div className={classes.movieSearch}>
+      <form>
+        <button className={classes.btn}>Search</button>
+        <input
+          type="search"
+          id="search"
+          placeholder="movie name"
+          className={classes.searchBox}
+        />
+      </form>
+    </div>
   );
 };
 
