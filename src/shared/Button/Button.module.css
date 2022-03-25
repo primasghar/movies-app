@@ -1,0 +1,17 @@
+.btn {
+  display: inline-block;
+  color: #0d3f64;
+  background-color: white;
+  text-align: center;
+  width: 80px;
+  line-height: 45px;
+  cursor: pointer;
+
+  border-radius: 4px 0 0 4px;
+  transition-duration: 0.4s;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #edf2fb;
+}
