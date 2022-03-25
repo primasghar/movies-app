@@ -4,10 +4,14 @@
 .headline {
   font-weight: bold;
 }
+.nav {
+  background-color: #012a4a;
+}
 
 .list {
   list-style: none;
   padding: 0px;
+  margin-top: 0;
 }
 
 .nav .active {
@@ -21,6 +25,7 @@
   transition: 0.3s;
   display: block;
 }
+
 a:active,
 a:visited {
   color: white;

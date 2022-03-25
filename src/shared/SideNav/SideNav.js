@@ -5,8 +5,7 @@ import classes from "./SideNav.module.css";
 
 const SideNav = () => {
   return (
-    <div className={classes.nav}>
-      <h2 className={classes.headline}>Movies Nav</h2>
+    <nav className={classes.nav}>
       <ul className={classes.list}>
         <li>
           <NavLink
@@ -50,7 +49,7 @@ const SideNav = () => {
           </NavLink>
         </li>
       </ul>
-    </div>
+    </nav>
   );
 };
 export default SideNav;
