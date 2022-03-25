@@ -22,7 +22,6 @@ const MovieList = (props) => {
       <MovieItem movieData={"data"} />
       <MovieItem movieData={"data"} />
       <MovieItem movieData={"data"} />
-      <MovieItem movieData={"data"} />
     </div>
   );
 };
