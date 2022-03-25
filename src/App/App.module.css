@@ -1,17 +1,14 @@
 .app {
-  max-width: 1500px;
+  max-width: 1400px;
   margin: 0 auto;
-  background-color: blueviolet;
 }
 
 .main {
   display: flex;
-  background-color: aqua;
 }
 
 .mainContent {
   padding: 15px;
   flex: 1;
   background-color: #edf2fb;
-  display: flex;
 }

@@ -17,10 +17,8 @@ const App = () => {
   return (
     <div className={classes.app}>
       <Header />
-
       <div className={classes.main}>
         <SideNav />
-
         <section className={classes.mainContent}>
           <Routes>
             <Route path="/" element={<NewRelease />} />
