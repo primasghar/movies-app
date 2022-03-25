@@ -1,13 +1,13 @@
 .wrapper {
   margin: 15px;
+  height: 100vh;
 }
 
 .detail {
   display: flex;
-  background-color: rgb(148, 147, 151);
+  background-color: #477395;
 }
 
 .img {
   margin-right: 15px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
