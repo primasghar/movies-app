@@ -2,11 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import test from "../../assets/images/test.jpg";
+
 import classes from "./MovieItem.module.css";
 
 const MovieItem = ({ movieData, handledetail }) => {
   return (
-    <div>
+    <div className={classes.movieItem}>
       <Link to={`/moviedetail/${movieData.id}`}>
         <img
           src={test}
@@ -18,7 +19,7 @@ const MovieItem = ({ movieData, handledetail }) => {
       </Link>
 
       <div className={classes.genre}>
-        <span className={classes.title}>{movieData.title}</span>
+        <span className={classes.title}>{"Enchanto"}</span>
         <span className={classes.rating}>{movieData.rating}</span>
       </div>
     </div>
