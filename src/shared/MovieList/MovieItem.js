@@ -13,7 +13,7 @@ const MovieItem = ({ movieData, handledetail }) => {
           src={test}
           alt="poster"
           width={200}
-          height={150}
+          height={250}
           onClick={handledetail}
         />
       </Link>
