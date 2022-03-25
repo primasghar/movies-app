@@ -9,13 +9,13 @@ const Header = () => {
       <h1 className={classes.logo}>Show Time</h1>
 
       <div className={classes.movieSearch}>
-        <Button>Search</Button>
         <input
           type="search"
           id="search"
           // placeholder="movie name"
           className={classes.searchBox}
         />
+        <Button>Search</Button>
       </div>
     </div>
   );
