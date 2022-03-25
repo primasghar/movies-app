@@ -2,9 +2,26 @@ import React from "react";
 
 import MovieItem from "./MovieItem";
 
+import classes from "./MovieList.module.css";
+
 const MovieList = (props) => {
   return (
-    <div>
+    <div className={classes.wrapper}>
+      <MovieItem movieData={"data"} />
+      <MovieItem movieData={"data"} />
+      <MovieItem movieData={"data"} />
+      <MovieItem movieData={"data"} />
+      <MovieItem movieData={"data"} />
+      <MovieItem movieData={"data"} />
+      <MovieItem movieData={"data"} />
+      <MovieItem movieData={"data"} />
+      <MovieItem movieData={"data"} />
+      <MovieItem movieData={"data"} />
+      <MovieItem movieData={"data"} />
+      <MovieItem movieData={"data"} />
+      <MovieItem movieData={"data"} />
+      <MovieItem movieData={"data"} />
+      <MovieItem movieData={"data"} />
       <MovieItem movieData={"data"} />
     </div>
   );
