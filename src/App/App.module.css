@@ -1,24 +1,17 @@
 .app {
-  background-color: #74bdcb; /*Aquamarine */
-  display: flex;
   max-width: 1500px;
-  height: 100vh;
   margin: 0 auto;
-}
-
-.sec_1 {
-  background-color: #012a4a;
-}
-
-.sec_2 {
-  flex-grow: 2;
-  align-content: center;
-  background-color: #edf2fb;
+  background-color: blueviolet;
 }
 
 .main {
-  padding: 15px;
+  display: flex;
+  background-color: aqua;
 }
 
-.search {
+.mainContent {
+  padding: 15px;
+  flex: 1;
+  background-color: #edf2fb;
+  display: flex;
 }

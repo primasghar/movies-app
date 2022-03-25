@@ -16,13 +16,12 @@ import classes from "./App.module.css";
 const App = () => {
   return (
     <div className={classes.app}>
-      <section className={classes.sec_1}>
-        <SideNav />
-      </section>
-      <section className={classes.sec_2}>
-        <Header className={classes.search} />
+      <Header />
 
-        <div className={classes.main}>
+      <div className={classes.main}>
+        <SideNav />
+
+        <section className={classes.mainContent}>
           <Routes>
             <Route path="/" element={<NewRelease />} />
             <Route path="/comingsoon" element={<ComingSoon />} />
@@ -32,8 +31,8 @@ const App = () => {
             <Route path="/moviedetail/:id" element={<MovieDetail />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 };
