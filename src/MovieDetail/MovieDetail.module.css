@@ -4,6 +4,7 @@
 
 .detail {
   display: flex;
+  background-color: rgb(148, 147, 151);
 }
 
 .img {
