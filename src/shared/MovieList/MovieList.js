@@ -4,24 +4,12 @@ import MovieItem from "./MovieItem";
 
 import classes from "./MovieList.module.css";
 
-const MovieList = (props) => {
+const MovieList = ({ movies }) => {
   return (
     <div className={classes.wrapper}>
-      <MovieItem movieData={"data"} />
-      <MovieItem movieData={"data"} />
-      <MovieItem movieData={"data"} />
-      <MovieItem movieData={"data"} />
-      <MovieItem movieData={"data"} />
-      <MovieItem movieData={"data"} />
-      <MovieItem movieData={"data"} />
-      <MovieItem movieData={"data"} />
-      <MovieItem movieData={"data"} />
-      <MovieItem movieData={"data"} />
-      <MovieItem movieData={"data"} />
-      <MovieItem movieData={"data"} />
-      <MovieItem movieData={"data"} />
-      <MovieItem movieData={"data"} />
-      <MovieItem movieData={"data"} />
+      {movies.map((movie) => (
+        <MovieItem movieData={movie} key={movie.id} />
+      ))}
     </div>
   );
 };
