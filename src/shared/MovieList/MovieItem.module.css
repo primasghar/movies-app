@@ -1,3 +1,38 @@
 .movieItem {
   margin: 10px;
+  width: 240px;
+  height: 350;
+  border-radius: 6px;
+}
+
+.poster {
+  margin: 1px;
+  border-radius: 4px;
+}
+.movieInfo {
+  margin: 2px;
+}
+
+.star {
+  height: 14px;
+}
+
+.rating {
+  margin: 0 6px;
+}
+a.title:link {
+  color: #0d3f64;
+  text-decoration: none;
+}
+
+a.title:hover {
+  text-decoration: underline;
+}
+
+a.title:visited {
+  color: green;
+}
+
+.releaseDate {
+  margin: 2px 0;
 }
