@@ -4,7 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 import MovieList from "../shared/MovieList/MovieList";
 import ReactPaginate from "react-paginate";
 import Notification from "../shared/Notification";
+import Spinner from "../shared/Spinner";
+
 import { fetchMovieData } from "../store/movie-action";
+
 import classes from "./NewRelease.module.css";
 
 const NewRelease = () => {
@@ -27,8 +30,9 @@ const NewRelease = () => {
 
   console.log("NewRelease", notification);
 
-  if (notification.status === "loading" || notification.status === "pending") {
-    return "loading";
+  // if (notification.status === "loading" || notification.status === "pending") {
+  if (true) {
+    return <Spinner />;
   }
 
   return (
