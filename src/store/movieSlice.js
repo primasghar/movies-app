@@ -4,13 +4,13 @@ const movieSlice = createSlice({
   name: "movies",
   initialState: { moviesList: null },
   reducers: {
-    resetMovies: (state, action) => {
+    setMovies: (state, action) => {
       state.moviesList = action.payload;
     },
   },
 });
 
-export const { resetMovies } = movieSlice.actions;
+export const { setMovies } = movieSlice.actions;
 export default movieSlice.reducer;
 
 // import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
