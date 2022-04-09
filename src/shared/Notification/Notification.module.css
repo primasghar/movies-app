@@ -9,19 +9,18 @@
   color: white;
 }
 
-.notification h2,
-.notification p {
+.notification h2 {
   font-size: 16px;
   margin: 0;
 }
 
+.loading {
+  background-color: #0b8544;
+}
 .error {
   background-color: #690000;
 }
 
 .success {
   background-color: #1ad1b9;
-}
-.loading {
-  background-color: #0b8544;
 }
