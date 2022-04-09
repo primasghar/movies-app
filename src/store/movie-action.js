@@ -1,13 +1,11 @@
-import { showNotification } from "./uiSlice";
-import { resetMovies } from "./movieSlice";
+import { setStatus } from "./uiSlice";
+import { setMovies } from "./movieSlice";
 
-export const fetchMovieData = (URL) => {
+export const fetchMovies = (URL) => {
   return async (dispatch) => {
     dispatch(
-      showNotification({
+      setStatus({
         status: "loading",
-        title: "Loading",
-        message: "Movies data is loading",
       })
     );
 
@@ -23,20 +21,16 @@ export const fetchMovieData = (URL) => {
     };
     try {
       const movieData = await getData();
-      dispatch(resetMovies(movieData));
+      dispatch(setMovies(movieData));
       dispatch(
-        showNotification({
+        setStatus({
           status: "success",
-          title: "success",
-          message: "Movies data success",
         })
       );
     } catch (error) {
       dispatch(
-        showNotification({
+        setStatus({
           status: "error",
-          title: "Error",
-          message: "fetching movie data failed",
         })
       );
     }
