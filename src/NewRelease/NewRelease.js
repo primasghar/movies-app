@@ -1,67 +1,50 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import MovieList from "../shared/MovieList/MovieList";
-import ReactPaginate from "react-paginate";
+import MovieList from "../shared/MovieList";
+import CommonPaginate from "../shared/CommonPaginate";
 import Notification from "../shared/Notification";
 import Spinner from "../shared/Spinner";
 
-import { fetchMovieData } from "../store/movie-action";
-
-import classes from "./NewRelease.module.css";
+import { fetchMovies } from "../store/movie-action";
 
 const NewRelease = () => {
-  const dispatch = useDispatch();
-  const movies = useSelector((state) => state.movie.moviesList);
-
-  const notification = useSelector((state) => state.ui.notification);
-
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
+
+  const dispatch = useDispatch();
+
+  const {
+    movie: { moviesList },
+    ui: { notification },
+  } = useSelector((state) => state);
 
   const URL = `https://api.themoviedb.org/3/movie/now_playing?api_key=44215a69b2337d878932ea0a9d2088d4&language=en-US&page=${currentPageNumber}`;
 
   useEffect(() => {
-    dispatch(fetchMovieData(URL));
+    dispatch(fetchMovies(URL));
   }, [URL, currentPageNumber, dispatch]);
 
   const getNextPage = (event) => {
     setCurrentPageNumber(event.selected + 1);
   };
 
-  console.log("NewRelease", notification);
-
-  // if (notification.status === "loading" || notification.status === "pending") {
-  if (true) {
+  if (notification.status === "loading" || notification.status === "pending") {
     return <Spinner />;
   }
 
   return (
-    <div>
+    <>
       {notification.status === "error" && (
-        <Notification
-          status={notification.status}
-          title={notification.title}
-          message={notification.message}
-        />
+        <Notification status={notification.status} />
       )}
-      <MovieList movies={movies.results} />
 
-      {/* <CommonPagination fecthNext= {() => fetchMovieData(URL)} /> */}
+      <MovieList movies={moviesList.results} />
 
-      <ReactPaginate
-        nextLabel={">"}
-        onPageChange={getNextPage}
-        pageRangeDisplayed={5}
-        pageCount={movies.total_pages}
-        previousLabel={"<"}
-        renderOnZeroPageCount={null}
-        className={classes.paginationBttns}
-        previousClassName={classes.previousBttn}
-        nextClassName={classes.nextBttn}
-        activeClassName={classes.paginationActive}
-        disabledClassName={classes.paginationDisabled}
+      <CommonPaginate
+        getNextPage={getNextPage}
+        pageCount={moviesList.total_pages}
       />
-    </div>
+    </>
   );
 };
 
