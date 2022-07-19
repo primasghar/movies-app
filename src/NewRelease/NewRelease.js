@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import ReactPaginate from "react-paginate";
+import Paginate from "../shared/Paginate";
 import axios from "axios";
 
 import MovieList from "../shared/MovieList/MovieList";
-import classes from "./NewRelease.module.css";
 
 const NewRelease = () => {
   const [data, setData] = useState(null);
@@ -27,18 +26,12 @@ const NewRelease = () => {
     <div>
       <MovieList movies={data.results} />
 
-      <ReactPaginate
+      <Paginate
         nextLabel={">"}
         onPageChange={getNextPage}
         pageRangeDisplayed={5}
         pageCount={data.total_pages}
         previousLabel={"<"}
-        renderOnZeroPageCount={null}
-        className={classes.paginationBttns}
-        previousClassName={classes.previousBttn}
-        nextClassName={classes.nextBttn}
-        activeClassName={classes.paginationActive}
-        disabledClassName={classes.paginationDisabled}
       />
     </div>
   );
