@@ -1,47 +1,47 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from 'react-router-dom';
 
 import classes from "./MovieDetail.module.css";
-// import { useParams } from "react-router-dom";
 
-import test from "../assets/images/test.jpg";
+import axios from "axios";
 
 const MovieDetail = () => {
-  // const params = useParams();
+  const [data, setData] = useState(null);
+  let { id } = useParams();
 
-  //find the id const movie= movieData.find(movie=>movie.id===params.id);
-  //if (!movie) {
-  //   <p>No movie found</p> fallback for unknown url
-  // }
+  const URL = `https://api.themoviedb.org/3/movie/${id}?api_key=44215a69b2337d878932ea0a9d2088d4&language=en-US`;
 
+  useEffect(() => {
+    axios.get(URL).then((response) => setData(response.data));
+  }, [URL]);
+
+  console.log("data", data);
+  if (!data) {
+    return <p>Loading</p>;
+  }
   return (
     <main className={classes.wrapper}>
       <div className={classes.detail}>
         <img
-          className={classes.img}
+          className={classes.img2}
           alt="movie poster"
-          src={test}
-          width={300}
-          height={450}
+          src={`https://image.tmdb.org/t/p/w500${data.poster_path}`}
+          width={500}
+          height={500}
         />
         <section>
-          <h1>Enchanto</h1>
-          <span>2021</span>
-          <br />
-          <span>Family/Musical</span> <span>1h 49min</span>
-          <span>Play trailer</span>
+          <h1>{data.title}</h1>
+            <div>
+          <h3>Release Date: {data.release_date}</h3>
+          <h3>Genres:
+            {data.genres.map((genre) => (
+              <span>{genre.name}</span>
+            ))}
+          </h3>
           <h3>Overview</h3>
-          <p>
-            The Madrigals are an extraordinary family who live hidden in the
-            mountains of Colombia in a charmed place called the Encanto.
-          </p>
-          <span>Director and Screenplay</span>
-          <br />
-          {/* <p>{params.id}</p> */}
+          <p>{data.overview}</p>
+            </div>
         </section>
-      </div>
-      <div>
-        <span>Cast</span>
-        {/* use slider or carousel */}
       </div>
     </main>
   );
