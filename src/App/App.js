@@ -9,6 +9,7 @@ import PopularMovies from "../PopularMovies";
 import PopularPeople from "../PopularPeople";
 import TopRated from "../TopRated";
 import MovieDetail from "../MovieDetail";
+import SearchResult from "../SearchResult";
 import NotFound from "../shared/NotFound/NotFound";
 
 import classes from "./App.module.css";
@@ -27,6 +28,7 @@ const App = () => {
             <Route path="/popularpeople" element={<PopularPeople />} />
             <Route path="/toprated" element={<TopRated />} />
             <Route path="/moviedetail/:id" element={<MovieDetail />} />
+            <Route path="/search/:query" element={<SearchResult />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </section>
