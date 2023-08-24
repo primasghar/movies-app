@@ -1,17 +1,39 @@
-.wrapper {
-  height: 100vh;
-}
-
-.detail {
+.container {
+  background: #0077b6;
   display: flex;
-  border: 2px solid black;
-
+  height: 100vh;
+  color: #edf2fb;
+  border-radius: 4px;
 }
 
-.img2 {
-  margin: 15px;
+.topDetail {
+display: flex;
+  padding: 12px;
+
+}
+.movieInfo {
+  padding: 4px 16px;
 }
 
-.detailTitle{
+h1 {
+font-weight: 900;
+}
 
+.infoList {
+  padding: 0;
+}
+
+.infoItem{
+  display:inline;
+  margin-right: 5px;
+}
+
+.genreList {
+  padding: 0;
+  list-style: none;
+  display:inline;
+}
+
+.genreItems{
+  display:inline;
 }
