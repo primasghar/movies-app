@@ -51,7 +51,7 @@ const MovieDetail = () => {
             <li className={classes.infoItem}>{data.runtime}</li>
           </ul>
 
-          <h3>{data.tagline}</h3>
+          <p className={classes.tagLine}>{data.tagline}</p>
           <h3>Overview</h3>
           <p>{data.overview}</p>
         </section>
