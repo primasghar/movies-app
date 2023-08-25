@@ -1,10 +1,11 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Icon } from "react-icons-kit";
 import { search } from "react-icons-kit/icomoon/search";
 import { useNavigate } from "react-router-dom";
 
 import Button from "../Button";
 import classes from "./Header.module.css";
+import NavIcon from "../Icon/NavIcon";
 
 const Header = () => {
   const [enteredText, setEnteredText] = useState("");
@@ -21,7 +22,6 @@ const Header = () => {
 
   return (
     <div className={classes.header}>
-      <h1 className={classes.logo}>Show Time</h1>
       <form className={classes.movieSearch} onSubmit={submitHandler}>
         <input
           type="text"
@@ -34,6 +34,7 @@ const Header = () => {
           <Icon icon={search} size="26" />
         </Button>
       </form>
+      <NavIcon className={classes.navIcon} />
     </div>
   );
 };
