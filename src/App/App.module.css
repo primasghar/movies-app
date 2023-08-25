@@ -5,10 +5,37 @@
 
 .main {
   display: flex;
+  background-color: #edf2fb;
 }
 
-.mainContent {
-  padding: 15px;
+.sideContainer {
+  background-color: #012a4a;
+}
+
+.logo {
+  font-size: 40px;
+  color: aliceblue;
+  height: 76px;
+  text-align: center;
+  padding-top: 14px;
+  margin-bottom: 4px;
+  margin-top: 0px;
+}
+
+.displayContainer {
+  /*padding: 15px;*/
   flex: 1;
-  background-color: #edf2fb;
+}
+
+.displayContainerHeader {
+  height: 80px;
+  padding-top: 14px;
+  padding-left: 14px;
+  background-color: #012a4a;
+}
+
+@media screen and (max-width: 800px) {
+  .sideContainer {
+    display: none;
+  }
 }

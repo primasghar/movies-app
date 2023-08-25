@@ -17,10 +17,16 @@ import classes from "./App.module.css";
 const App = () => {
   return (
     <div className={classes.app}>
-      <Header />
       <div className={classes.main}>
-        <SideNav />
-        <section className={classes.mainContent}>
+        <div className={classes.sideContainer}>
+          <h1 className={classes.logo}>Show time</h1>
+          <SideNav />
+        </div>
+
+        <div className={classes.displayContainer}>
+          <div className={classes.displayContainerHeader}>
+            <Header />
+          </div>
           <Routes>
             <Route path="/" element={<NewRelease />} />
             <Route path="/comingsoon" element={<ComingSoon />} />
@@ -31,7 +37,7 @@ const App = () => {
             <Route path="/search/:query" element={<SearchResult />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </section>
+        </div>
       </div>
     </div>
   );
