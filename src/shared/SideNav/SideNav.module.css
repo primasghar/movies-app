@@ -1,11 +1,9 @@
 .nav {
+  background-color: #012a4a;
   margin: 0px;
 }
 .headline {
   font-weight: bold;
-}
-.nav {
-  background-color: #012a4a;
 }
 
 .list {
@@ -18,6 +16,7 @@
   background-color: #edf2fb;
   color: #012a4a;
 }
+
 .nav a {
   color: white;
   text-decoration: none;
@@ -26,10 +25,10 @@
   display: block;
 }
 
-a:active,
-a:visited {
-  color: white;
-}
+/*a:active,*/
+/*a:visited {*/
+/*  color: white;*/
+/*}*/
 
 a:hover {
   color: #012a4a;

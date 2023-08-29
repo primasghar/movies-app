@@ -9,7 +9,8 @@ const SideNav = () => {
       <ul className={classes.list}>
         <li>
           <NavLink
-            className={(navData) => navData.isActive && classes.active}
+            exact
+            className={(navData) => (navData.isActive ? classes.active : "")}
             to="/"
           >
             New Release
