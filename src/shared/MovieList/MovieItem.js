@@ -7,7 +7,7 @@ import classes from "./MovieItem.module.css";
 const MovieItem = ({ movieData }) => {
   return (
     <div className={classes.movieItem}>
-      <Link to={`/moviedetail/${movieData.id}`}>
+      <Link to={`moviedetail/${movieData.id}`}>
         <img
           src={`https://image.tmdb.org/t/p/w500/${movieData.poster_path}`}
           alt="poster"
@@ -22,7 +22,7 @@ const MovieItem = ({ movieData }) => {
           <img src={star} alt="rating star" className={classes.star} />
           <span className={classes.rating}>{movieData.vote_average}</span>
         </div>
-        <Link to={`/moviedetail/${movieData.id}`} className={classes.title}>
+        <Link to={`moviedetail/${movieData.id}`} className={classes.title}>
           {movieData.title}
         </Link>
         <p className={classes.releaseDate}>{movieData.release_date}</p>
