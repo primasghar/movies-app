@@ -1,29 +1,14 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import classes from "./BreadCrumbs.module.css";
 
-const BreadCrumbs = (props) => {
-  const location = useLocation();
-  console.log(location);
-
-  let link = "";
-
-  const crumbs = location.pathname
-    .split("/")
-    .filter((crumb) => crumb !== "")
-    .map((crumb) => {
-      link += `/${crumb}`;
-      return (
-        <div className={classes.crumb} key={location.key}>
-          <Link to={link}>{crumb}</Link>
-        </div>
-      );
-    });
+const BreadCrumbs = ({ movieName }) => {
+  let { movieType } = useParams();
 
   return (
     <div className={classes.secondaryNav}>
-      {crumbs}
-      <span>{props.movieName}</span>
+      <Link to={"/" + movieType}>{movieType.toUpperCase()}</Link>
+      <span className={classes.secNav}>{movieName.toUpperCase()}</span>
     </div>
   );
 };

@@ -1,9 +1,15 @@
-.crumb:after {
-    content: "-";
-}
-
 
 .secondaryNav {
     display: flex;
-    margin-right: 10px;
+    padding: 10px;
+}
+
+a{
+    color:  #012a4a;
+    text-decoration: none;
+}
+
+.secNav:before {
+    margin: 5px;
+    content: ">";
 }
