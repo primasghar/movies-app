@@ -24,9 +24,9 @@ const App = () => {
         </div>
 
         <div className={classes.displayContainer}>
-          <div className={classes.displayContainerHeader}>
+          <header className={classes.displayContainerHeader}>
             <Header />
-          </div>
+          </header>
           <Routes>
             <Route path="/" element={<NewRelease />} />
             <Route path="/comingsoon" element={<ComingSoon />} />
