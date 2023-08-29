@@ -11,23 +11,23 @@ const SideNav = () => {
           <NavLink
             exact
             className={(navData) => (navData.isActive ? classes.active : "")}
-            to="/"
+            to="/nowplaying/1"
           >
-            New Release
+            Now Playing
           </NavLink>
         </li>
         <li>
           <NavLink
             className={(navData) => (navData.isActive ? classes.active : "")}
-            to="/comingsoon"
+            to="/comingsoon/1"
           >
-            Coming soon
+            Coming Soon
           </NavLink>
         </li>
         <li>
           <NavLink
             className={(navData) => (navData.isActive ? classes.active : "")}
-            to="/popularmovies"
+            to="/popularmovies/1"
           >
             Popular Movies
           </NavLink>
@@ -35,19 +35,19 @@ const SideNav = () => {
         <li>
           <NavLink
             className={(navData) => (navData.isActive ? classes.active : "")}
-            to="/toprated"
+            to="/toprated/1"
           >
             Top Rated
           </NavLink>
         </li>
 
         <li>
-          <NavLink
-            className={(navData) => (navData.isActive ? classes.active : "")}
-            to="/popularpeople"
-          >
-            Popular People
-          </NavLink>
+          {/*<NavLink*/}
+          {/*  className={(navData) => (navData.isActive ? classes.active : "")}*/}
+          {/*  to="/popularpeople"*/}
+          {/*>*/}
+          {/*  Popular People*/}
+          {/*</NavLink>*/}
         </li>
       </ul>
     </nav>
