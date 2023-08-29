@@ -1,21 +1,24 @@
 import React, { useEffect, useState } from "react";
-import Paginate from "../shared/Paginate";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
+import Paginate from "../shared/Paginate";
 import MovieList from "../shared/MovieList/MovieList";
 
 const TopRated = () => {
   const [data, setData] = useState(null);
-  const [currentPageNumber, setCurrentPageNumber] = useState(1);
 
-  const URL = `https://api.themoviedb.org/3/movie/top_rated?api_key=44215a69b2337d878932ea0a9d2088d4&language=en-US&page=${currentPageNumber}`;
+  let { currentPage } = useParams();
+  const navigate = useNavigate();
+
+  const URL = `https://api.themoviedb.org/3/movie/top_rated?api_key=44215a69b2337d878932ea0a9d2088d4&language=en-US&page=${currentPage}`;
 
   useEffect(() => {
     axios.get(URL).then((response) => setData(response.data));
-  }, [URL, currentPageNumber]);
+  }, [URL, currentPage]);
 
-  const getNextPage = (event) => {
-    setCurrentPageNumber(event.selected + 1);
+  const getNextPage = () => {
+    navigate(`/toprated/${+currentPage + 1}`);
   };
 
   if (!data) {
