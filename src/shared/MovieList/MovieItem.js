@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import star from "../../assets/images/star.png";
 import classes from "./MovieItem.module.css";
 
-const MovieItem = ({ movieData, handledetail }) => {
+const MovieItem = ({ movieData }) => {
   return (
     <div className={classes.movieItem}>
       <Link to={`/moviedetail/${movieData.id}`}>
@@ -13,7 +13,6 @@ const MovieItem = ({ movieData, handledetail }) => {
           alt="poster"
           width={234}
           height={330}
-          onClick={handledetail}
           className={classes.poster}
         />
       </Link>
