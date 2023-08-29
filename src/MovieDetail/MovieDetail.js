@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import axios from "axios";
 
 import Breadcrumbs from "../components/Breadcrumbs";
 import classes from "./MovieDetail.module.css";
-
-import axios from "axios";
 
 const MovieDetail = () => {
   const [data, setData] = useState(null);
@@ -20,8 +19,6 @@ const MovieDetail = () => {
     return <p>Loading</p>;
   }
 
-  console.log(data);
-
   const renderGenres = data.genres.map((genre, index) => {
     if (index === data.genres.length - 1) {
       return <li className={classes.genreItems}>{genre.name}</li>;
@@ -32,7 +29,7 @@ const MovieDetail = () => {
 
   return (
     <main className={classes.container}>
-      <Breadcrumbs movieName={data.title} />
+      {/*<Breadcrumbs movieName={data.title} />*/}
       <div className={classes.topDetail}>
         <section className={classes.imgSection}>
           <img

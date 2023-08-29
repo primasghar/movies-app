@@ -1,8 +1,7 @@
 .container {
-  background: #0077b6;
+  color: #012a4a;
   /*display: flex;*/
   height: 100vh;
-  color: #edf2fb;
   border-radius: 4px;
 }
 
@@ -24,7 +23,7 @@ h3 {
 }
 
 .tagLine {
-  color: antiquewhite;
+  color:  #012a4a;
   font-size: 20px;
   font-style: italic;
 }
