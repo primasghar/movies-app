@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import SideNav from "../shared/SideNav";
 import Header from "../shared/Header";
-import NewRelease from "../NewRelease";
+import NowPlaying from "../NowPlaying";
 import ComingSoon from "../ComingSoon";
 import PopularMovies from "../PopularMovies";
 import PopularPeople from "../PopularPeople";
@@ -28,12 +28,21 @@ const App = () => {
             <Header />
           </header>
           <Routes>
-            <Route path="/" element={<NewRelease />} />
-            <Route path="/comingsoon" element={<ComingSoon />} />
-            <Route path="/popularmovies" element={<PopularMovies />} />
-            <Route path="/popularpeople" element={<PopularPeople />} />
-            <Route path="/toprated" element={<TopRated />} />
-            <Route path="/moviedetail/:id" element={<MovieDetail />} />
+            <Route path="/nowplaying/:currentPage" element={<NowPlaying />} />
+            <Route path="/comingsoon/:currentPage" element={<ComingSoon />} />
+            <Route
+              path="/popularmovies/:currentPage"
+              element={<PopularMovies />}
+            />
+            <Route
+              path="/popularpeople/:currentPage"
+              element={<PopularPeople />}
+            />
+            <Route path="/toprated/:currentPage" element={<TopRated />} />
+            <Route
+              path=":movieType/:currentPage/moviedetail/:id"
+              element={<MovieDetail />}
+            />
             <Route path="/search/:query" element={<SearchResult />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
