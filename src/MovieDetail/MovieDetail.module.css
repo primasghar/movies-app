@@ -1,6 +1,6 @@
 .container {
   background: #0077b6;
-  display: flex;
+  /*display: flex;*/
   height: 100vh;
   color: #edf2fb;
   border-radius: 4px;
