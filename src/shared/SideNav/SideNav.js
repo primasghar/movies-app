@@ -9,7 +9,6 @@ const SideNav = () => {
       <ul className={classes.list}>
         <li>
           <NavLink
-            exact
             className={(navData) => (navData.isActive ? classes.active : "")}
             to="/nowplaying/1"
           >
