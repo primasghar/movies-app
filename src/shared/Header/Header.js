@@ -22,6 +22,8 @@ const Header = () => {
 
   return (
     <div className={classes.header}>
+      <NavIcon className={classes.navIcon} />
+      <h1 className={classes.logo}>Show time</h1>
       <form className={classes.movieSearch} onSubmit={submitHandler}>
         <input
           type="text"
@@ -34,7 +36,6 @@ const Header = () => {
           <Icon icon={search} size="26" />
         </Button>
       </form>
-      <NavIcon className={classes.navIcon} />
     </div>
   );
 };
