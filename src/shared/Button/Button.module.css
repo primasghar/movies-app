@@ -1,11 +1,11 @@
 .btn {
-  display: inline-block;
+  /*s*/
   color: #0d3f64;
   background-color: white;
   text-align: center;
-  width: 80px;
-  line-height: 43px;
-  padding: 1.5px 6px 0;
+  max-width: 80px;
+  line-height: 44px;
+  padding: 1px 16px 0;
   cursor: pointer;
   border: none;
   border-radius: 0 4px 4px 0;
