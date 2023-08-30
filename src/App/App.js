@@ -28,22 +28,23 @@ const App = () => {
             <Header />
           </header>
           <Routes>
-            <Route path="/nowplaying/:currentPage" element={<NowPlaying />} />
-            <Route path="/comingsoon/:currentPage" element={<ComingSoon />} />
+            <Route path="/" element={<NowPlaying />} />
+            <Route path="nowplaying/:currentPage" element={<NowPlaying />} />
+            <Route path="comingsoon/:currentPage" element={<ComingSoon />} />
             <Route
-              path="/popularmovies/:currentPage"
+              path="popularmovies/:currentPage"
               element={<PopularMovies />}
             />
             <Route
-              path="/popularpeople/:currentPage"
+              path="popularpeople/:currentPage"
               element={<PopularPeople />}
             />
-            <Route path="/toprated/:currentPage" element={<TopRated />} />
+            <Route path="toprated/:currentPage" element={<TopRated />} />
             <Route
               path=":movieType/:currentPage/moviedetail/:id"
               element={<MovieDetail />}
             />
-            <Route path="/search/:query" element={<SearchResult />} />
+            <Route path="search/:query" element={<SearchResult />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
