@@ -19,7 +19,6 @@ const App = () => {
     <div className={classes.app}>
       <div className={classes.main}>
         <div className={classes.sideContainer}>
-          <h1 className={classes.logo}>Show time</h1>
           <SideNav />
         </div>
 

@@ -10,16 +10,7 @@
 
 .sideContainer {
   background-color: #012a4a;
-}
 
-.logo {
-  font-size: 40px;
-  color: aliceblue;
-  height: 52px;
-  text-align: center;
-  padding: 8px 0 ;
-  margin: 14px 0;
-  margin: 14px 0;
 }
 
 .displayContainer {
@@ -28,9 +19,8 @@
 }
 
 .displayContainerHeader {
-  height: 80px;
-  padding-top: 14px;
-  padding-left: 14px;
+  max-height: 100px;
+  padding-left: 16px;
   background-color: #012a4a;
 }
 
