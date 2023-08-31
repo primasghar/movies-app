@@ -1,58 +1,43 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 
-import SideNav from "../shared/SideNav";
-import Header from "../shared/Header";
-import NowPlaying from "../NowPlaying";
-import ComingSoon from "../ComingSoon";
-import PopularMovies from "../PopularMovies";
-import PopularPeople from "../PopularPeople";
-import TopRated from "../TopRated";
-import MovieDetail from "../MovieDetail";
-import SearchResult from "../SearchResult";
+import NowPlaying from "../pages/NowPlaying";
+import ComingSoon from "../pages/ComingSoon";
+import PopularMovies from "../pages/PopularMovies";
+import PopularPeople from "../pages/PopularPeople";
+import TopRated from "../pages/TopRated";
+import MovieDetail from "../pages/MovieDetail";
+import SearchResult from "../pages/SearchResult";
 import NotFound from "../shared/NotFound/NotFound";
 
-import classes from "./App.module.css";
+import MainLayout from "../layouts/MainLayout";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<MainLayout />}>
+      <Route index element={<NowPlaying />} />
+      <Route path="nowplaying/:currentPage" element={<NowPlaying />} />
+      <Route path="comingsoon/:currentPage" element={<ComingSoon />} />
+      <Route path="popularmovies/:currentPage" element={<PopularMovies />} />
+      <Route path="popularpeople/:currentPage" element={<PopularPeople />} />
+      <Route path="toprated/:currentPage" element={<TopRated />} />
+      <Route
+        path=":movieType/:currentPage/moviedetail/:id"
+        element={<MovieDetail />}
+      />
+      <Route path="search/:query" element={<SearchResult />} />
+      <Route path="*" element={<NotFound />} />
+    </Route>
+  )
+);
 
 const App = () => {
-  return (
-    <div className={classes.app}>
-      <div className={classes.main}>
-        <div className={classes.sideContainer}>
-          <SideNav />
-        </div>
-
-        <div className={classes.displayContainer}>
-          <header className={classes.displayContainerHeader}>
-            <Header />
-          </header>
-          <Routes>
-            <Route path="/" element={<NowPlaying />} />
-            <Route path="nowplaying/:currentPage" element={<NowPlaying />} />
-            <Route path="comingsoon/:currentPage" element={<ComingSoon />} />
-            <Route
-              path="popularmovies/:currentPage"
-              element={<PopularMovies />}
-            />
-            <Route
-              path="popularpeople/:currentPage"
-              element={<PopularPeople />}
-            />
-            <Route path="toprated/:currentPage" element={<TopRated />} />
-            <Route
-              path=":movieType/:currentPage/moviedetail/:id"
-              element={<MovieDetail />}
-            />
-            <Route path="search/:query" element={<SearchResult />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </div>
-      </div>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;
-
-// Dynamic Routes with Params
-//* Route is considered when no other Route matches
