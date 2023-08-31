@@ -3,9 +3,9 @@ import { Icon } from "react-icons-kit";
 import { search } from "react-icons-kit/icomoon/search";
 import { useNavigate } from "react-router-dom";
 
-import Button from "../Button";
+import Button from "../../shared/Button";
 import classes from "./Header.module.css";
-import NavIcon from "../Icon/NavIcon";
+import NavIcon from "../../shared/Icon/NavIcon";
 
 const Header = () => {
   const [enteredText, setEnteredText] = useState("");
