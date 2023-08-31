@@ -5,15 +5,22 @@
 
 }
 
+.titleLogo {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   font-size: 35px;
   color: aliceblue;
-  padding: 6px;
-  margin: 14px 40px 14px 10px;
+  padding: 16px;
+  margin: 10px;
 }
 
 .movieSearch {
-  flex: 2;
+  flex: 1;
+  display: flex;
+  justify-content: center;
   width: 800px;
 
 }

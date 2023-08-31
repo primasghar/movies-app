@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 import Button from "../../shared/Button";
 import classes from "./Header.module.css";
-import NavIcon from "../../shared/Icon/NavIcon";
+// import NavIcon from "../../shared/Icon/NavIcon";
 
 const Header = () => {
   const [enteredText, setEnteredText] = useState("");
@@ -22,8 +22,10 @@ const Header = () => {
 
   return (
     <div className={classes.header}>
-      <NavIcon className={classes.navIcon} />
-      <h1 className={classes.logo}>Show time</h1>
+      <div className={classes.titleLogo}>
+      {/*<NavIcon className={classes.navIcon} />*/}
+      <h1 className={classes.logo}>TMDB</h1>
+      </div>
       <form className={classes.movieSearch} onSubmit={submitHandler}>
         <input
           type="text"
