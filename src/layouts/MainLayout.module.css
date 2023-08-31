@@ -1,0 +1,33 @@
+.appLayout {
+    margin: 0 auto;
+    padding: 0;
+    /*max-height: 100%;*/
+    width: 1440px;
+}
+
+.main {
+    display: flex;
+    background-color: #edf2fb;
+}
+
+.sideContainer {
+    background-color: #012a4a;
+
+}
+
+.displayContainer {
+    /*padding: 15px;*/
+    flex: 1;
+}
+
+.displayContainerHeader {
+    max-height: 100px;
+    padding-left: 16px;
+    background-color: #012a4a;
+}
+
+@media screen and (max-width: 800px) {
+    .sideContainer {
+        display: none;
+    }
+}
