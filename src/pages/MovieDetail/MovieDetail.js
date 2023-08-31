@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-import Breadcrumbs from "../components/Breadcrumbs";
+// import Breadcrumbs from "../components/Breadcrumbs";
 import classes from "./MovieDetail.module.css";
 
 const MovieDetail = () => {

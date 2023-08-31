@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
-import Paginate from "../shared/Paginate";
-import MovieList from "../shared/MovieList/MovieList";
+import Paginate from "../../shared/Paginate";
+import MovieList from "../../shared/MovieList/MovieList";
 
 const TopRated = () => {
   const [data, setData] = useState(null);

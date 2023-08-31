@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import MovieList from "../shared/MovieList";
-import Paginate from "../shared/Paginate";
+import MovieList from "../../shared/MovieList";
+import Paginate from "../../shared/Paginate";
 
-import classes from "./SearchResult.module.css";
+// import classes from "./SearchResult.module.css";
 
 const SearchResult = () => {
   const [data, setData] = useState(null);
