@@ -9,14 +9,14 @@ import classes from "./MainLayout.module.css";
 const MainLayout = () => {
   return (
     <div className={classes.appLayout}>
+      <header className={classes.appHeader}>
+        <Header />
+      </header>
       <div className={classes.main}>
         <div className={classes.sideContainer}>
           <SideNav />
         </div>
         <div className={classes.displayContainer}>
-          <header className={classes.displayContainerHeader}>
-            <Header />
-          </header>
           <Outlet />
         </div>
       </div>
