@@ -1,6 +1,6 @@
 .nav {
-  background-color: #012a4a;
-  margin: 0px;
+  /*background-color: #012a4a;*/
+  margin: 80px 0 0 0;
 }
 .headline {
   font-weight: bold;
@@ -32,5 +32,5 @@
 
 a:hover {
   color: #012a4a;
-  background-color: #edf2fb;
+  background-color: #cae2f2;
 }
