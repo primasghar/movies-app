@@ -9,6 +9,7 @@ const Paginate = ({
   pageCount,
 }) => {
   return (
+      <div className={classes.paginate}>
     <ReactPaginate
       nextLabel={nextLabel}
       onPageChange={onPageChange}
@@ -22,6 +23,7 @@ const Paginate = ({
       activeClassName={classes.paginationActive}
       disabledClassName={classes.paginationDisabled}
     />
+      </div>
   );
 };
 
