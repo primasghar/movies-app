@@ -1,0 +1,8 @@
+.footer {
+    color: #edf2fb;
+    background-color:#012a4a ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 200px;
+}

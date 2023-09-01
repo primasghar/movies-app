@@ -6,12 +6,14 @@
     padding: 0;
     /*max-height: 100%;*/
     max-width: 1440px;
+    border-radius: 8px;
 }
 
 .main {
     flex: 1;
     display: flex;
     background-color: #edf2fb;
+
 }
 
 .sideContainer {
@@ -19,12 +21,13 @@
 }
 
 .displayContainer {
-    /*padding: 15px;*/
+    padding: 8px;
+    margin-bottom: 10px;
     flex: 1;
 }
 
 .appHeader {
-    max-height: 100px;
+    height: 100px;
     padding-left: 16px;
     background-color: #012a4a;
 }
