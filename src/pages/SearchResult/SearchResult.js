@@ -18,7 +18,7 @@ const SearchResult = () => {
     axios.get(URL).then((response) => setData(response.data));
   }, [URL, currentPageNumber]);
 
-  const getNextPage = (event) => {
+  const onChangePage = (event) => {
     setCurrentPageNumber(event.selected + 1);
   };
 
@@ -36,7 +36,7 @@ const SearchResult = () => {
 
       <Paginate
         nextLabel={">"}
-        onPageChange={getNextPage}
+        onPageChange={onChangePage}
         pageRangeDisplayed={5}
         pageCount={data.total_pages}
         previousLabel={"<"}

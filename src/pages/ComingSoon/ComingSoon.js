@@ -17,8 +17,8 @@ const ComingSoon = () => {
     axios.get(URL).then((response) => setData(response.data));
   }, [URL, currentPage]);
 
-  const getNextPage = () => {
-    navigate(`/comingsoon/${+currentPage + 1}`);
+  const onChangePage = (event) => {
+    navigate(`/comingsoon/${event.selected+1}`);
   };
 
   if (!data) {
@@ -31,7 +31,7 @@ const ComingSoon = () => {
 
       <Paginate
         nextLabel={">"}
-        onPageChange={getNextPage}
+        onPageChange={onChangePage}
         pageRangeDisplayed={5}
         pageCount={data.total_pages}
         previousLabel={"<"}

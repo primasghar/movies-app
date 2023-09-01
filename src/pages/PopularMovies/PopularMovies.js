@@ -17,8 +17,8 @@ const PopularMovies = () => {
     axios.get(URL).then((response) => setData(response.data));
   }, [URL, currentPage]);
 
-  const getNextPage = () => {
-    navigate(`/popularmovies/${+currentPage + 1}`);
+  const onChangePage = (event) => {
+    navigate(`/popularmovies/${event.selected + 1}`);
   };
 
   if (!data) {
@@ -31,7 +31,7 @@ const PopularMovies = () => {
 
       <Paginate
         nextLabel={">"}
-        onPageChange={getNextPage}
+        onPageChange={onChangePage}
         pageRangeDisplayed={5}
         pageCount={data.total_pages}
         previousLabel={"<"}
