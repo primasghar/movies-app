@@ -1,28 +1,29 @@
 .header {
   display: flex;
-  gap: 10px;
+  gap: 64px;
   align-items: center;
 
 }
 
-.titleLogo {
+.logoNav {
   display: flex;
   align-items: center;
 }
 
+.navIcon {
+display: none;
+}
+
 .logo {
-  font-size: 35px;
-  color: aliceblue;
-  padding: 16px;
-  margin: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .movieSearch {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   width: 800px;
-
 }
 
 .searchBox {

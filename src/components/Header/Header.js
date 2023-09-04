@@ -4,6 +4,7 @@ import { search } from "react-icons-kit/icomoon/search";
 import { useNavigate } from "react-router-dom";
 
 import Button from "../../shared/Button";
+import logo from "../../assets/images/logo-64px.png";
 import classes from "./Header.module.css";
 // import NavIcon from "../../shared/Icon/NavIcon";
 
@@ -22,9 +23,9 @@ const Header = () => {
 
   return (
     <div className={classes.header}>
-      <div className={classes.titleLogo}>
+      <div className={classes.logoNav}>
       {/*<NavIcon className={classes.navIcon} />*/}
-      <h1 className={classes.logo}>TMDB</h1>
+      <img src={logo} alt={"app logo Icon"} className={classes.logo}></img>
       </div>
       <form className={classes.movieSearch} onSubmit={submitHandler}>
         <input

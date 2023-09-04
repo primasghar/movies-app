@@ -4,16 +4,21 @@
     flex-wrap: wrap;
     margin: 0 auto;
     padding: 0;
-    /*max-height: 100%;*/
-    max-width: 1440px;
-    border-radius: 8px;
 }
 
 .main {
-    flex: 1;
+    /*flex: 1;*/
     display: flex;
     background-color: #edf2fb;
 
+}
+
+.appHeader {
+    display: flex;
+    justify-content: flex-start;
+    height: 100px;
+    padding: 0 20px;
+    background-color: #012a4a;
 }
 
 .sideContainer {
@@ -24,12 +29,6 @@
     padding: 8px;
     margin-bottom: 10px;
     flex: 1;
-}
-
-.appHeader {
-    height: 100px;
-    padding-left: 16px;
-    background-color: #012a4a;
 }
 
 @media screen and (max-width: 800px) {
