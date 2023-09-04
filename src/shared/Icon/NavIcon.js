@@ -5,7 +5,7 @@ import { navicon } from "react-icons-kit/fa/navicon";
 const NavIcon = () => {
   return (
     <div style={{ color: "#edf2fb" }}>
-      <Icon icon={navicon} size={26} />
+      <Icon icon={navicon} size={36} />
     </div>
   );
 };
