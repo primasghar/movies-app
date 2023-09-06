@@ -5,19 +5,19 @@ import Email from "../../shared/Icon/Email";
 
 const Footer = () => {
     return (
-        <div className={classes.footer}>
+        <footer className={classes.footer}>
             <div className={classes.contact}>
-                <h3>Contact us:</h3>
+                <p>Contact us:</p>
                 <Email className={classes.email}/>
 
             </div>
             <div  className={classes.follow} >
-                <h3>Follow us:</h3>
+                <p>Follow us:</p>
                <Facebook className={classes.socialMedia1}/>
                 <Instagram  className={classes.socialMedia}  />
             </div>
 
-        </div>
+        </footer>
     );
 };
 

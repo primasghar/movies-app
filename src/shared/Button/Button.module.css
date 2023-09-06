@@ -1,11 +1,10 @@
 .btn {
-  /*s*/
   color: #0d3f64;
   background-color: white;
   text-align: center;
   max-width: 80px;
   line-height: 44px;
-  padding: 2px 16px 0px;
+  padding:  3px 16px ;
   cursor: pointer;
   border: none;
   border-radius: 0 4px 4px 0;

@@ -1,40 +1,22 @@
-.appLayout {
+.appContainer {
     display:flex;
     flex-direction: column;
-    flex-wrap: wrap;
     margin: 0 auto;
     padding: 0;
 }
 
 .main {
-    /*flex: 1;*/
     display: flex;
-    background-color: #edf2fb;
-
+    flex: 1;
 }
 
-.appHeader {
-    display: flex;
-    justify-content: flex-start;
-    height: 100px;
-    padding: 0 20px;
-    background-color: #012a4a;
-}
-
-.sideContainer {
-    background-color: #012a4a;
-}
-
-.displayContainer {
+.displaySection {
     padding: 8px;
     margin-bottom: 10px;
     flex: 1;
 }
 
-@media screen and (max-width: 800px) {
-    .sideContainer {
-        display: none;
-    }
-}
+
+
 
 

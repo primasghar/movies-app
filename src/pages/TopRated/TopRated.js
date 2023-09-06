@@ -30,11 +30,8 @@ const TopRated = () => {
       <MovieList movies={data.results} />
 
       <Paginate
-        nextLabel={">"}
         onPageChange={onChangePage}
-        pageRangeDisplayed={5}
         pageCount={data.total_pages}
-        previousLabel={"<"}
       />
     </div>
   );

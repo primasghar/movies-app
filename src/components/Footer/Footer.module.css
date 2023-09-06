@@ -2,8 +2,8 @@
     color: #edf2fb;
     background-color:#012a4a ;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    height: 200px;
 }
 .contact, .follow {
     display: flex;

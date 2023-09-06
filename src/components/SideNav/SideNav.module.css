@@ -1,5 +1,6 @@
 .nav {
   margin:0;
+  background-color: #012a4a;
 }
 .headline {
   font-weight: bold;
@@ -32,4 +33,10 @@
 a:hover {
   color: #012a4a;
   background-color: #cae2f2;
+}
+
+@media screen and (max-width: 800px) {
+  .nav {
+    display: none;
+  }
 }

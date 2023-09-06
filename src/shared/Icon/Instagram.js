@@ -4,7 +4,7 @@ import {instagram} from 'react-icons-kit/icomoon/instagram'
 const Instagram = () => {
     return (
         <div>
-            <Icon icon={instagram} size={26} />
+            <Icon icon={instagram} size={20} />
         </div>
     );
 };

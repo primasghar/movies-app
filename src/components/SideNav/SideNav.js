@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 import classes from "./SideNav.module.css";
 
-const SideNav = () => {
+const SideNav = ({className}) => {
   return (
     <nav className={classes.nav}>
       <ul className={classes.list}>
