@@ -32,7 +32,7 @@ display: none;
   width: 500px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 810px) {
   .header {
     gap: 20px;
     flex-wrap:wrap;
@@ -45,6 +45,12 @@ display: none;
     margin-right: 10px;
   }
 
+  .searchBox {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 600px) {
   .searchBox {
     width: 200px;
   }
