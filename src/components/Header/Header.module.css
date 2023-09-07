@@ -40,6 +40,10 @@ display: none;
   .navIcon {
     display: block;
   }
+  .navIcon:hover {
+    cursor:pointer;
+  }
+
   .logo {
     margin-left: 10px;
     margin-right: 10px;

@@ -8,11 +8,11 @@ import logo from "../../assets/images/logo-64px.png";
 import classes from "./Header.module.css";
 import NavIcon from "../../shared/Icon/NavIcon";
 
-const Header = ({onClick}) => {
+const Header = ({ onClickNav }) => {
   const [enteredText, setEnteredText] = useState("");
   const navigate = useNavigate();
 
-  const changeHandler = (event) => {
+  const handleSearchInput = (event) => {
     setEnteredText(event.target.value);
   };
 
@@ -24,23 +24,23 @@ const Header = ({onClick}) => {
   return (
     <header className={classes.header}>
       <div className={classes.logoNav}>
-          <div className={classes.navIcon}>
-            <NavIcon onClick={onClick}/>
-          </div>
-          <img src={logo} alt={"app logo Icon"} className={classes.logo}></img>
+        <div className={classes.navIcon} onClick={onClickNav}>
+          <NavIcon />
+        </div>
+        <img src={logo} alt={"app logo Icon"} className={classes.logo}></img>
       </div>
-            <form onSubmit={submitHandler}>
-                <input
-                    type="text"
-                    id="search"
-                    className={classes.searchBox}
-                    onChange={changeHandler}
-                    value={enteredText}
-                />
-                <Button type="submit">
-                    <Icon icon={search} size="26" />
-                </Button>
-            </form>
+      <form onSubmit={submitHandler}>
+        <input
+          type="text"
+          id="search"
+          className={classes.searchBox}
+          onChange={handleSearchInput}
+          value={enteredText}
+        />
+        <Button type="submit">
+          <Icon icon={search} size="26" />
+        </Button>
+      </form>
     </header>
   );
 };

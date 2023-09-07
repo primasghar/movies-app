@@ -16,6 +16,11 @@
     flex: 1;
 }
 
+@media screen and (max-width: 810px) {
+    .main {
+        position: relative;
+    }
+}
 
 
 
