@@ -12,7 +12,7 @@
 .notFound::before {
     content: "";
     position: absolute;
-    top: 0px;
+    top: 0;
     right:0px;
     bottom: 0px;
     left:0px;

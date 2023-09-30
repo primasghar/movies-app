@@ -3,11 +3,12 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import MovieList from "../../shared/MovieList";
 import Paginate from "../../shared/Paginate";
+import { MoviesData } from "../../types/movieData";
 
 // import classes from "./SearchResult.module.css";
 
 const SearchResult = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<MoviesData | null>(null);
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
 
   let { query } = useParams();
@@ -18,8 +19,8 @@ const SearchResult = () => {
     axios.get(URL).then((response) => setData(response.data));
   }, [URL, currentPageNumber]);
 
-  const onChangePage = (event) => {
-    setCurrentPageNumber(event.selected + 1);
+  const onChangePage = (selectedNumber: { selected: number }) => {
+    setCurrentPageNumber(selectedNumber.selected + 1);
   };
 
   if (!data) {
@@ -34,10 +35,7 @@ const SearchResult = () => {
     <div>
       <MovieList movies={data.results} />
 
-      <Paginate
-        onPageChange={onChangePage}
-        pageCount={data.total_pages}
-      />
+      <Paginate onPageChange={onChangePage} pageCount={data.total_pages} />
     </div>
   );
 };

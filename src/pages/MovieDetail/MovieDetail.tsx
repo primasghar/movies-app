@@ -5,8 +5,10 @@ import axios from "axios";
 // import Breadcrumbs from "../components/Breadcrumbs";
 import classes from "./MovieDetail.module.css";
 
+import { MovieInfo } from "../../types/movieDetail";
+
 const MovieDetail = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<MovieInfo | null>(null);
   let { id } = useParams();
 
   const URL = `https://api.themoviedb.org/3/movie/${id}?api_key=44215a69b2337d878932ea0a9d2088d4&language=en-US`;
@@ -31,9 +33,8 @@ const MovieDetail = () => {
     <main className={classes.container}>
       {/*<Breadcrumbs movieName={data.title} />*/}
       <div className={classes.topDetail}>
-        <section className={classes.imgSection}>
+        <section>
           <img
-            className={classes.img2}
             alt="movie poster"
             src={`https://image.tmdb.org/t/p/w500${data.poster_path}`}
             // width={500}

@@ -3,7 +3,10 @@ import { NavLink } from "react-router-dom";
 import cn from "classnames";
 import classes from "./SideNav.module.css";
 
-const SideNav = ({ openNav }) => (
+type Props = {
+  openNav: boolean;
+};
+const SideNav = ({ openNav }: Props) => (
   <nav className={cn(classes.nav, !openNav && classes.displayNone)}>
     <ul className={classes.list}>
       <li>

@@ -22,7 +22,7 @@ const MainLayout = () => {
     }
   }, [width]);
 
-  const handleNavClick = () => {
+  const handleNavClick = ():void => {
     setOpenNav(!openNav);
   };
 

@@ -5,20 +5,22 @@ import axios from "axios";
 import Paginate from "../../shared/Paginate";
 import MovieList from "../../shared/MovieList/MovieList";
 
-const PopularMovies = () => {
-  const [data, setData] = useState(null);
+import { MoviesData } from "../../types/movieData";
+
+const NowPlaying = () => {
+  const [data, setData] = useState<MoviesData | null>(null);
 
   let { currentPage } = useParams();
   const navigate = useNavigate();
 
-  const URL = `https://api.themoviedb.org/3/movie/popular?api_key=44215a69b2337d878932ea0a9d2088d4&language=en-US&page=${currentPage}`;
+  const URL = `https://api.themoviedb.org/3/movie/now_playing?api_key=44215a69b2337d878932ea0a9d2088d4&language=en-US&page=${currentPage}`;
 
   useEffect(() => {
     axios.get(URL).then((response) => setData(response.data));
   }, [URL, currentPage]);
 
-  const onChangePage = (event) => {
-    navigate(`/popularmovies/${event.selected + 1}`);
+  const onChangePage = (selectedNumber: { selected: number }) => {
+    navigate(`/nowplaying/${selectedNumber.selected + 1}`);
   };
 
   if (!data) {
@@ -29,12 +31,9 @@ const PopularMovies = () => {
     <div>
       <MovieList movies={data.results} />
 
-      <Paginate
-        onPageChange={onChangePage}
-        pageCount={data.total_pages}
-      />
+      <Paginate onPageChange={onChangePage} pageCount={data.total_pages} />
     </div>
   );
 };
 
-export default PopularMovies;
+export default NowPlaying;

@@ -8,16 +8,20 @@ import logo from "../../assets/images/logo-64px.png";
 import classes from "./Header.module.css";
 import NavIcon from "../../shared/Icon/NavIcon";
 
-const Header = ({ onClickNav }) => {
+type Props = {
+  onClickNav: () => void;
+};
+const Header = ({ onClickNav }: Props) => {
   const [enteredText, setEnteredText] = useState("");
   const navigate = useNavigate();
 
-  const handleSearchInput = (event) => {
+  const handleSearchInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEnteredText(event.target.value);
   };
 
-  const submitHandler = (event) => {
+  const submitHandler = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
     navigate(`search/${enteredText}`);
   };
 

@@ -4,7 +4,11 @@ import { Link } from "react-router-dom";
 import star from "../../assets/images/star.png";
 import classes from "./MovieItem.module.css";
 
-const MovieItem = ({ movieData }) => {
+import { Movie } from "../../types/movieData";
+type Props = {
+  movieData: Movie;
+};
+const MovieItem = ({ movieData }: Props) => {
   return (
     <div className={classes.movieItem}>
       <Link to={`moviedetail/${movieData.id}`}>
