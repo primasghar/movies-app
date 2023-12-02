@@ -32,6 +32,14 @@ const MovieDetail = () => {
   return (
     <main className={classes.container}>
       {/*<Breadcrumbs movieName={data.title} />*/}
+      <div className={classes.backdrop}>
+        <img
+          className={classes.backdropImage}
+          alt="movie backdrop"
+          src={`https://image.tmdb.org/t/p/w500${data.backdrop_path}`}
+          height={500}
+        />
+      </div>
       <div className={classes.topDetail}>
         <section>
           <img
@@ -52,14 +60,11 @@ const MovieDetail = () => {
             <li className={classes.infoItem}> - </li>
             <li className={classes.infoItem}>{data.runtime}</li>
           </ul>
-
           <p className={classes.tagLine}>{data.tagline}</p>
           <h3>Overview</h3>
           <p>{data.overview}</p>
         </section>
       </div>
-
-      <section></section>
     </main>
   );
 };

@@ -1,66 +1,83 @@
 .container {
-  color: #012a4a;
-  /*display: flex;*/
-  height: 100vh;
-  border-radius: 4px;
+    font-size: 18px;
+    color: white;
+    font-weight: 700;
+    height: 100vh;
+    border-radius: 4px;
+    text-shadow: 2px 2px 8px black;
+}
+
+.backdrop {
+    padding: 4px 16px;
+}
+
+.backdropImage {
+    opacity: 0.8;
+    width: 100%;
+    height: 600px;
 }
 
 .topDetail {
-display: flex;
-  padding: 12px;
+    position: absolute;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 36px;
 }
 
 .movieInfo {
-  padding: 4px 16px;
+    padding: 0 36px;
+
 }
 
 h1 {
-  font-size: 24px;
+    font-size: 24px;
 }
 
 h3 {
-  margin: 20px 0;
+    margin: 20px 0;
 }
 
 .tagLine {
-  color:  #012a4a;
-  font-size: 20px;
-  font-style: italic;
+    font-size: 20px;
+    font-style: italic;
 }
 
 .infoList {
-  padding:0;
+    padding: 0;
 }
 
-.infoItem{
-  display:inline;
-  margin-right: 5px;
+.infoItem {
+    display: inline;
+    margin-right: 5px;
 }
 
 .genreList {
-  display:inline;
-  padding: 0;
-  list-style: none;
+    display: inline;
+    padding: 0;
+    list-style: none;
 }
 
-.genreItems{
-  display:inline;
+.genreItems {
+    display: inline;
 }
 
-@media screen and (max-width: 810px){
-  .topDetail {
-   flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+@media screen and (max-width: 810px) {
+    .topDetail {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
-@media screen and (max-width: 375px){
-  .movieImage {
-width: 280px;
-    height: 400px;
-  }
-  .movieInfo {
-    padding: 0 2px;
-  }
+@media screen and (max-width: 375px) {
+    .movieImage {
+        width: 280px;
+        height: 400px;
+    }
+
+    .movieInfo {
+        padding: 0 2px;
+    }
 }
