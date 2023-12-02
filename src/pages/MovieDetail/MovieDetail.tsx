@@ -41,7 +41,7 @@ const MovieDetail = () => {
         />
       </div>
       <div className={classes.topDetail}>
-        <section>
+        <section className={classes.imageSection}>
           <img
             className={classes.movieImage}
             alt="movie poster"
