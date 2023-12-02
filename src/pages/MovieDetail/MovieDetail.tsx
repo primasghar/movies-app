@@ -35,9 +35,9 @@ const MovieDetail = () => {
       <div className={classes.topDetail}>
         <section>
           <img
+            className={classes.movieImage}
             alt="movie poster"
             src={`https://image.tmdb.org/t/p/w500${data.poster_path}`}
-            // width={500}
             height={500}
           />
         </section>

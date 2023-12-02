@@ -8,8 +8,8 @@
 .topDetail {
 display: flex;
   padding: 12px;
-
 }
+
 .movieInfo {
   padding: 4px 16px;
 }
@@ -45,4 +45,22 @@ h3 {
 
 .genreItems{
   display:inline;
+}
+
+@media screen and (max-width: 810px){
+  .topDetail {
+   flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 375px){
+  .movieImage {
+width: 280px;
+    height: 400px;
+  }
+  .movieInfo {
+    padding: 0 2px;
+  }
 }
