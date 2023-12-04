@@ -20,7 +20,6 @@ import MainLayout from "../layouts/MainLayout";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
-      <Route index element={<NowPlaying />} />
       <Route path="nowplaying/:currentPage" element={<NowPlaying />} />
       <Route path="comingsoon/:currentPage" element={<ComingSoon />} />
       <Route path="popularmovies/:currentPage" element={<PopularMovies />} />
@@ -32,8 +31,8 @@ const router = createBrowserRouter(
       />
       <Route path="search/:query" element={<SearchResult />} />
       <Route path="*" element={<NotFound />} />
-    </Route>
-  )
+    </Route>,
+  ),
 );
 
 const App = () => {
