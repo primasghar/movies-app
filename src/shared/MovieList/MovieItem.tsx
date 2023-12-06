@@ -5,6 +5,7 @@ import star from "../../assets/images/star.png";
 import classes from "./MovieItem.module.css";
 
 import { Movie } from "../../types/movieData";
+
 type Props = {
   movieData: Movie;
 };
@@ -29,7 +30,6 @@ const MovieItem = ({ movieData }: Props) => {
         <Link to={`moviedetail/${movieData.id}`} className={classes.title}>
           {movieData.title}
         </Link>
-        <p className={classes.releaseDate}>{movieData.release_date}</p>
       </div>
     </div>
   );
