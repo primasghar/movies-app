@@ -12,6 +12,14 @@ const SideNav = ({ openNav }: Props) => (
       <li>
         <NavLink
           className={(navData) => (navData.isActive ? classes.active : "")}
+          to="/"
+        >
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={(navData) => (navData.isActive ? classes.active : "")}
           to="/nowplaying/1"
         >
           Now Playing

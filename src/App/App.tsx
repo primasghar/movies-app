@@ -16,10 +16,12 @@ import SearchResult from "../pages/SearchResult";
 import NotFound from "../shared/NotFound/NotFound";
 
 import MainLayout from "../layouts/MainLayout";
+import HomePage from "../pages/HomePage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
+      <Route index element={<HomePage />} />
       <Route path="nowplaying/:currentPage" element={<NowPlaying />} />
       <Route path="comingsoon/:currentPage" element={<ComingSoon />} />
       <Route path="popularmovies/:currentPage" element={<PopularMovies />} />
