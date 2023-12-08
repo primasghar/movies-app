@@ -1,35 +1,30 @@
-import Carousel from "react-multi-carousel";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+import classes from "./HomePage.module.css";
 import "react-multi-carousel/lib/styles.css";
 
+import { MoviesData } from "../../types/movieData";
+import CarouselSlider from "../../shared/CarouselSlider";
+
 const HomePage = () => {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  };
+  const [data, setData] = useState<MoviesData | null>(null);
+
+  const URL = `https://api.themoviedb.org/3/movie/top_rated?api_key=44215a69b2337d878932ea0a9d2088d4&language=en-US`;
+
+  useEffect(() => {
+    axios.get(URL).then((response) => setData(response.data));
+  }, [URL]);
+
+  if (!data) {
+    return "Loading...";
+  }
   return (
-    <div>
-      <Carousel responsive={responsive}>
-        <div>Item 1</div>
-        <div>Item 2</div>
-        <div>Item 3</div>
-        <div>Item 4</div>
-      </Carousel>
-      ;
+    <div className={classes.home}>
+      <h1>Trending</h1>
+      <CarouselSlider Data={data.results}></CarouselSlider>
+      <h1>Popular</h1>
+      <CarouselSlider Data={data.results}></CarouselSlider>
     </div>
   );
 };

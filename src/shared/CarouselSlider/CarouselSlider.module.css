@@ -1,0 +1,32 @@
+.carouselContainer {
+    width: 1400px;
+    height: 400px
+}
+.carouselCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 240px;
+    height: 350px;
+    border-radius: 6px;
+}
+
+.poster {
+    margin: 1px;
+    border-radius: 4px;
+}
+
+a.title:link {
+    color: #0d3f64;
+    text-decoration: none;
+}
+
+a.title:hover {
+    text-decoration: underline;
+}
+
+a.title:visited {
+    color: green;
+}
