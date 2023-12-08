@@ -10,6 +10,8 @@ type Props = {
   movieData: Movie;
 };
 const MovieItem = ({ movieData }: Props) => {
+  const rating = movieData.vote_average;
+  const roundedRating = Math.round(rating);
   return (
     <div className={classes.movieItem}>
       <Link to={`moviedetail/${movieData.id}`}>
@@ -25,7 +27,7 @@ const MovieItem = ({ movieData }: Props) => {
       <div className={classes.movieInfo}>
         <div>
           <img src={star} alt="rating star" className={classes.star} />
-          <span className={classes.rating}>{movieData.vote_average}</span>
+          <span className={classes.rating}>{roundedRating}</span>
         </div>
         <Link to={`moviedetail/${movieData.id}`} className={classes.title}>
           {movieData.title}

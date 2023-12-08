@@ -22,9 +22,9 @@ const HomePage = () => {
   return (
     <div className={classes.home}>
       <h1>Trending</h1>
-      <CarouselSlider Data={data.results}></CarouselSlider>
+      <CarouselSlider movies={data.results}></CarouselSlider>
       <h1>Popular</h1>
-      <CarouselSlider Data={data.results}></CarouselSlider>
+      <CarouselSlider movies={data.results}></CarouselSlider>
     </div>
   );
 };

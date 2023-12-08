@@ -1,32 +1,56 @@
 .carouselContainer {
-    width: 1400px;
-    height: 400px
+    height: 460px;
 }
 .carouselCard{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10px;
-    width: 240px;
-    height: 350px;
+}
+.carouselItem{
+    margin: 0 6px 10px 6px;
     border-radius: 6px;
 }
 
-.poster {
-    margin: 1px;
-    border-radius: 4px;
+/* Width is calculated by removing side-margins*/
+@media screen and (max-width: 424px) {
+    .carouselContainer {
+        width: 280px;
+    }
+}
+@media screen and (min-width: 425px) {
+    .carouselContainer {
+        width: 395px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .carouselContainer {
+        width: 720px;
+    }
 }
 
-a.title:link {
-    color: #0d3f64;
-    text-decoration: none;
+
+/* Width is calculated by removing side-nav width and side-margins*/
+@media screen and (min-width: 1024px) {
+    .carouselContainer {
+        width: 753px;
+    }
 }
 
-a.title:hover {
-    text-decoration: underline;
+
+@media screen and (min-width: 1440px) {
+    .carouselContainer {
+        width: 1169px;
+    }
 }
 
-a.title:visited {
-    color: green;
+@media screen and (min-width: 1600px) {
+    .carouselContainer {
+        width: 1300px;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .carouselContainer {
+        width: 2260px;
+    }
 }

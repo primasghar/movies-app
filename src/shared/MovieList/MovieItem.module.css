@@ -21,7 +21,7 @@
   margin: 0 6px;
 }
 a.title:link {
-  color: #0d3f64;
+  color: black;
   text-decoration: none;
 }
 
@@ -30,6 +30,6 @@ a.title:hover {
 }
 
 a.title:visited {
-  color: green;
+  color: #0d3f64;
 }
 

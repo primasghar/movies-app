@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 
 import classes from "./CarouselSlider.module.css";
@@ -7,36 +6,46 @@ import "react-multi-carousel/lib/styles.css";
 import { Movie } from "../../types/movieData";
 
 import React from "react";
+import MovieItem from "../MovieList/MovieItem";
 
-type Props = {
-  Data: Movie[];
-};
-const CarouselSlider = ({ Data }: Props) => {
+type Props = { movies: Movie[] };
+
+const CarouselSlider = ({ movies }: Props) => {
   const responsive = {
-    SuperDesktop: {
-      breakpoint: { max: 3000, min: 1440 },
-      items: 6,
+    superLargeDesktop: {
+      breakpoint: { max: 3000, min: 2560 },
+      items: 9,
+    },
+    largeDesktop: {
+      breakpoint: { max: 2560, min: 1600 },
+      items: 5,
+    },
+    mediumDesktop: {
+      breakpoint: { max: 1600, min: 1440 },
+      items: 5,
     },
     desktop: {
       breakpoint: { max: 1440, min: 1024 },
-      items: 6,
+      items: 3,
     },
-    Laptop: {
+    laptop: {
       breakpoint: { max: 1024, min: 768 },
       items: 3,
     },
     tablet: {
       breakpoint: { max: 768, min: 425 },
-      items: 3,
+      items: 1,
     },
     mobile: {
       breakpoint: { max: 425, min: 0 },
       items: 1,
+      slidesToSlide: 1,
+      showDots: false,
     },
   };
 
   return (
-    <div className={classes.carouselContainer}>
+    <div>
       <Carousel
         responsive={responsive}
         swipeable={true}
@@ -46,24 +55,14 @@ const CarouselSlider = ({ Data }: Props) => {
         keyBoardControl={true}
         customTransition="all .5"
         transitionDuration={500}
-        containerClass="carousel-container"
-        itemClass="carousel-item-padding-40-px"
+        containerClass={classes.carouselContainer}
+        itemClass={classes.carouselItem}
+        slidesToSlide={1}
       >
-        {Data.map((movie: Movie) => {
+        {movies.map((movie) => {
           return (
             <div className={classes.carouselCard}>
-              <Link to={`moviedetail/${movie.id}`}>
-                <img
-                  src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-                  alt="poster"
-                  width={234}
-                  height={330}
-                  className={classes.poster}
-                />
-              </Link>
-              <Link to={`moviedetail/${movie.id}`} className={classes.title}>
-                {movie.title}
-              </Link>
+              <MovieItem movieData={movie} />
             </div>
           );
         })}
