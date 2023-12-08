@@ -38,33 +38,30 @@ const MovieDetail = () => {
           alt="movie backdrop"
           src={`https://image.tmdb.org/t/p/w500${data.backdrop_path}`}
           height={500}
+        />{" "}
+        <img
+          className={classes.movieImage}
+          alt="movie poster"
+          src={`https://image.tmdb.org/t/p/w500${data.poster_path}`}
+          height={500}
         />
       </div>
-      <div className={classes.topDetail}>
-        <section className={classes.imageSection}>
-          <img
-            className={classes.movieImage}
-            alt="movie poster"
-            src={`https://image.tmdb.org/t/p/w500${data.poster_path}`}
-            height={500}
-          />
-        </section>
-        <section className={classes.movieInfo}>
-          <h1>{data.title}</h1>
-          <ul className={classes.infoList}>
-            <li className={classes.infoItem}>{data.release_date}</li>
-            <li className={classes.infoItem}> - </li>
-            <li className={classes.infoItem}>
-              <ul className={classes.genreList}>{renderGenres}</ul>
-            </li>
-            <li className={classes.infoItem}> - </li>
-            <li className={classes.infoItem}>{data.runtime}</li>
-          </ul>
-          <p className={classes.tagLine}>{data.tagline}</p>
-          <h3>Overview</h3>
-          <p>{data.overview}</p>
-        </section>
-      </div>
+
+      <section className={classes.movieInfo}>
+        <h1>{data.title}</h1>
+        <ul className={classes.infoList}>
+          <li className={classes.infoItem}>{data.release_date}</li>
+          <li className={classes.infoItem}> - </li>
+          <li className={classes.infoItem}>
+            <ul className={classes.genreList}>{renderGenres}</ul>
+          </li>
+          <li className={classes.infoItem}> - </li>
+          <li className={classes.infoItem}>{data.runtime}</li>
+        </ul>
+        <p className={classes.tagLine}>{data.tagline}</p>
+        <h3>Overview</h3>
+        <p>{data.overview}</p>
+      </section>
     </main>
   );
 };
