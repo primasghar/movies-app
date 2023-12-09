@@ -1,61 +1,61 @@
 .carouselContainer {
-    height: 460px;
+    height: 440px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
-.carouselCard{
+
+.carouselCard {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.carouselSlider {
+    width: 240px;
+    height: 360px;
+}
+
 .carouselItem{
     border-radius: 6px;
 }
 
-/* Width is calculated by removing side-margins*/
-@media screen and (max-width: 424px) {
-    .carouselContainer {
-        width: 280px;
-    }
-}
-@media screen and (min-width: 425px) {
-    .carouselContainer {
-        width: 395px;
-    }
-}
-@media screen and (min-width: 768px) {
-    .carouselContainer {
-        width: 720px;
-    }
-}
+/* media queries */
 
-
-/* Width is calculated by removing side-nav width and side-margins*/
-
-@media screen and (min-width: 810px) {
+@media screen and (min-width: 1440px){
     .carouselContainer {
-        width: 530px;
+        width: 1000px;
     }
 }
-@media screen and (min-width: 1100px) {
+@media screen and (max-width: 1440px){
     .carouselContainer {
         width: 753px;
     }
 }
 
 
-@media screen and (min-width: 1440px) {
+@media screen and (max-width: 1024px){
     .carouselContainer {
-        width: 1169px;
+        width: 539px;
     }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (max-width: 810px){
     .carouselContainer {
-        width: 1300px;
+        width: 385px;
+    }
+    .carouselItem{
+        margin: 0 10px;
     }
 }
 
-@media screen and (min-width: 2560px) {
+@media screen and (max-width: 425px) {
     .carouselContainer {
-        width: 2260px;
+        width: 280px;
+    }
+
+.carouselItem{
+        margin: 0 6px;
     }
 }

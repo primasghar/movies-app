@@ -12,30 +12,28 @@ type Props = { movies: Movie[] };
 
 const CarouselSlider = ({ movies }: Props) => {
   const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 3000, min: 2560 },
-      items: 9,
-    },
     largeDesktop: {
-      breakpoint: { max: 2560, min: 1600 },
-      items: 5,
-    },
-    mediumDesktop: {
-      breakpoint: { max: 1600, min: 1440 },
-      items: 5,
+      breakpoint: { max: 3000, min: 1440 },
+      items: 4,
+      showDots: true,
+      slidesToSlide: 4,
     },
     desktop: {
       breakpoint: { max: 1440, min: 1024 },
-      items: 4,
-      slidesToSlide: 1,
+      items: 3,
+      showDots: true,
+      slidesToSlide: 3,
     },
     laptop: {
       breakpoint: { max: 1024, min: 810 },
       items: 2,
+      showDots: true,
+      slidesToSlide: 2,
     },
     tablet: {
       breakpoint: { max: 810, min: 425 },
-      items: 3,
+      items: 1,
+      slidesToSlide: 1,
     },
     mobile: {
       breakpoint: { max: 425, min: 0 },
@@ -49,16 +47,13 @@ const CarouselSlider = ({ movies }: Props) => {
     <div>
       <Carousel
         responsive={responsive}
-        swipeable={true}
-        draggable={true}
         infinite={true}
-        autoPlay={false}
         keyBoardControl={true}
         customTransition="all .5"
         transitionDuration={500}
         containerClass={classes.carouselContainer}
         itemClass={classes.carouselItem}
-        slidesToSlide={1}
+        sliderClass={classes.carouselSlider}
       >
         {movies.map((movie) => {
           return (

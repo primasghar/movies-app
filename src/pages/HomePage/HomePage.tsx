@@ -6,11 +6,12 @@ import "react-multi-carousel/lib/styles.css";
 
 import { MoviesData } from "../../types/movieData";
 import CarouselSlider from "../../shared/CarouselSlider";
+import { API_key, Base_URL } from "../../assets/scripts";
 
 const HomePage = () => {
   const [data, setData] = useState<MoviesData | null>(null);
 
-  const URL = `https://api.themoviedb.org/3/movie/top_rated?api_key=44215a69b2337d878932ea0a9d2088d4&language=en-US`;
+  const URL = `${Base_URL}/trending/all/day?${API_key}&language=en-US`;
 
   useEffect(() => {
     axios.get(URL).then((response) => setData(response.data));
@@ -21,9 +22,7 @@ const HomePage = () => {
   }
   return (
     <div className={classes.home}>
-      <h1>Trending</h1>
-      <CarouselSlider movies={data.results}></CarouselSlider>
-      <h1>Popular</h1>
+      <h1 className={classes.heading}>Trending</h1>
       <CarouselSlider movies={data.results}></CarouselSlider>
     </div>
   );
