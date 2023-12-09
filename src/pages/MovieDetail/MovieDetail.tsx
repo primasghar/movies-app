@@ -6,12 +6,13 @@ import axios from "axios";
 import classes from "./MovieDetail.module.css";
 
 import { MovieInfo } from "../../types/movieDetail";
+import { API_key, Base_URL } from "../../assets/scripts";
 
 const MovieDetail = () => {
   const [data, setData] = useState<MovieInfo | null>(null);
   let { id } = useParams();
 
-  const URL = `https://api.themoviedb.org/3/movie/${id}?api_key=44215a69b2337d878932ea0a9d2088d4&language=en-US`;
+  const URL = `${Base_URL}/movie/${id}?${API_key}&language=en-US`;
 
   useEffect(() => {
     axios.get(URL).then((response) => setData(response.data));
