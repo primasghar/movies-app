@@ -7,7 +7,6 @@
     align-items: center;
 }
 .carouselItem{
-    margin: 0 6px 10px 6px;
     border-radius: 6px;
 }
 
@@ -30,7 +29,13 @@
 
 
 /* Width is calculated by removing side-nav width and side-margins*/
-@media screen and (min-width: 1024px) {
+
+@media screen and (min-width: 810px) {
+    .carouselContainer {
+        width: 530px;
+    }
+}
+@media screen and (min-width: 1100px) {
     .carouselContainer {
         width: 753px;
     }

@@ -26,15 +26,16 @@ const CarouselSlider = ({ movies }: Props) => {
     },
     desktop: {
       breakpoint: { max: 1440, min: 1024 },
-      items: 3,
+      items: 4,
+      slidesToSlide: 1,
     },
     laptop: {
-      breakpoint: { max: 1024, min: 768 },
-      items: 3,
+      breakpoint: { max: 1024, min: 810 },
+      items: 2,
     },
     tablet: {
-      breakpoint: { max: 768, min: 425 },
-      items: 1,
+      breakpoint: { max: 810, min: 425 },
+      items: 3,
     },
     mobile: {
       breakpoint: { max: 425, min: 0 },
