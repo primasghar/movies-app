@@ -7,13 +7,15 @@ import MovieList from "../../shared/MovieList/MovieList";
 
 import { MoviesData } from "../../types/movieData";
 
+import { API_key, Base_URL } from "../../assets/scripts";
+
 const ComingSoon = () => {
   const [data, setData] = useState<MoviesData | null>(null);
 
   let { currentPage } = useParams();
   const navigate = useNavigate();
 
-  const URL = `https://api.themoviedb.org/3/movie/upcoming?api_key=44215a69b2337d878932ea0a9d2088d4&language=en-US&page=${currentPage}`;
+  const URL = `${Base_URL}/movie/upcoming?${API_key}&language=en-US&page=${currentPage}`;
 
   useEffect(() => {
     axios.get(URL).then((response) => setData(response.data));
