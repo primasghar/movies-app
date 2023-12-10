@@ -4,9 +4,10 @@ import axios from "axios";
 
 import Paginate from "../../shared/Paginate";
 
-import { Person, PeopleData } from "../../types/personData";
+import { PeopleData } from "../../types/personData";
 import { API_key, Base_URL } from "../../assets/scripts";
-import classes from "../../shared/MovieList/MovieList.module.css";
+
+import PeopleList from "../../shared/PeopleList/PeopleList";
 
 const PopularPeople = () => {
   const [data, setData] = useState<PeopleData | null>(null);
@@ -19,7 +20,7 @@ const PopularPeople = () => {
   useEffect(() => {
     axios.get(URL).then((response) => setData(response.data));
   }, [URL, currentPage]);
-
+  console.log(data);
   const handlePageChange = (selectedNumber: { selected: number }) => {
     navigate(`/popularpeople/${selectedNumber.selected + 1}`);
   };
@@ -29,12 +30,8 @@ const PopularPeople = () => {
   }
 
   return (
-    <div className={classes.peopleContainer}>
-      {data.results.map((person: Person) => (
-        <div key={person.id}>
-          <p>{person.name}</p>{" "}
-        </div>
-      ))}
+    <div>
+      <PeopleList people={data.results} />
       <Paginate onPageChange={handlePageChange} pageCount={data.total_pages} />
     </div>
   );

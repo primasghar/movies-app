@@ -5,7 +5,6 @@ import classes from "./SideNav.module.css";
 
 import { Icon } from "react-icons-kit";
 import { home } from "react-icons-kit/icomoon/home";
-// import sideNav from "./index";
 
 type Props = {
   openNav: boolean;
@@ -52,16 +51,16 @@ const SideNav = ({ openNav }: Props) => (
       <li>
         <NavLink
           className={(navData) => (navData.isActive ? classes.active : "")}
-          to="/toprated/1"
+          to="/topratedmovies/1"
         >
-          Top Rated
+          Top Rated Movies
         </NavLink>
       </li>
       <h2 className={classes.heading}>TV shows</h2>
       <li>
         <NavLink
           className={(navData) => (navData.isActive ? classes.active : "")}
-          to="/popularpeople"
+          to="/popular_shows/1"
         >
           Popular Shows
         </NavLink>
@@ -69,7 +68,7 @@ const SideNav = ({ openNav }: Props) => (
       <li>
         <NavLink
           className={(navData) => (navData.isActive ? classes.active : "")}
-          to="/popularpeople"
+          to="/airing_today/1"
         >
           Airing Today
         </NavLink>
@@ -77,7 +76,7 @@ const SideNav = ({ openNav }: Props) => (
       <li>
         <NavLink
           className={(navData) => (navData.isActive ? classes.active : "")}
-          to="/popularpeople"
+          to="/on_the_air/1"
         >
           On TV
         </NavLink>
@@ -85,16 +84,16 @@ const SideNav = ({ openNav }: Props) => (
       <li>
         <NavLink
           className={(navData) => (navData.isActive ? classes.active : "")}
-          to="/popularpeople"
+          to="/top_rated_shows"
         >
-          Top Rated
+          Top Rated Shows
         </NavLink>
       </li>
       <h2 className={classes.heading}>People</h2>
       <li>
         <NavLink
           className={(navData) => (navData.isActive ? classes.active : "")}
-          to="/popularpeople"
+          to="/popularpeople/1"
         >
           Popular People
         </NavLink>
