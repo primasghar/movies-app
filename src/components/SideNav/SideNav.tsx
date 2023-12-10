@@ -5,7 +5,7 @@ import classes from "./SideNav.module.css";
 
 import { Icon } from "react-icons-kit";
 import { home } from "react-icons-kit/icomoon/home";
-import sideNav from "./index";
+// import sideNav from "./index";
 
 type Props = {
   openNav: boolean;

@@ -1,4 +1,11 @@
-export type peopleData = {
+export type PeopleData = {
+  page: number;
+  results: Person[];
+  total_pages: number;
+  total_results: number;
+};
+
+export type Person = {
   adult: boolean;
   gender: number;
   id: number;

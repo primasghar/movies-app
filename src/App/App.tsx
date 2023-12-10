@@ -33,6 +33,7 @@ const router = createBrowserRouter(
       />
       <Route path="search/:query" element={<SearchResult />} />
       <Route path="*" element={<NotFound />} />
+      <Route path="popularpeople/:currentPage" element={<PopularPeople />} />
     </Route>,
   ),
 );
