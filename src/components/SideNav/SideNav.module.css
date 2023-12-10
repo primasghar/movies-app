@@ -1,33 +1,53 @@
 .nav {
-  margin:0;
-  background-color: #012a4a;
+    margin: 0;
+    background-color: #012a4a;
+}
+
+.homeIconText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.home {
+    margin: 0;
+    align-self: baseline;
+}
+
+.heading {
+    color: #edf2fb;
+    margin: 0;
+    padding: 20px 10px 20px 30px;
+    background-image: linear-gradient(90deg, #012a4a ,#31acb2);
 }
 
 .headline {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .list {
-  list-style: none;
-  padding: 0px;
-  margin-top: 0;
+    list-style: none;
+    padding: 0px;
+    margin-top: 0;
 }
 
 .nav .active {
-  background-color: #edf2fb;
-  color: #012a4a;
+    background-color: #edf2fb;
+    color: #012a4a;
 }
 
-.displayNone{
-  display: none;
+.displayNone {
+    display: none;
 }
 
 .nav a {
-  color: white;
-  text-decoration: none;
-  padding: 15px 60px;
-  transition: 0.3s;
-  display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 60px;
+    transition: 0.3s;
+    display: block;
 }
 
 /*a:active,*/
@@ -36,15 +56,15 @@
 /*}*/
 
 a:hover {
-  color: #012a4a;
-  background-color: #cae2f2;
+    color: #012a4a;
+    background-color: #cae2f2;
 }
 
-@media screen and (max-width: 810px){
-.nav {
-  position: absolute;
-  height:100vh;
-}
+@media screen and (max-width: 810px) {
+    .nav {
+        position: absolute;
+        height: 100vh;
+    }
 }
 
 

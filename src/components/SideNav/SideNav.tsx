@@ -3,6 +3,10 @@ import { NavLink } from "react-router-dom";
 import cn from "classnames";
 import classes from "./SideNav.module.css";
 
+import { Icon } from "react-icons-kit";
+import { home } from "react-icons-kit/icomoon/home";
+import sideNav from "./index";
+
 type Props = {
   openNav: boolean;
 };
@@ -14,9 +18,13 @@ const SideNav = ({ openNav }: Props) => (
           className={(navData) => (navData.isActive ? classes.active : "")}
           to="/"
         >
-          Home
+          <div className={classes.homeIconText}>
+            <Icon icon={home} size={20} />{" "}
+            <h1 className={classes.home}>Home</h1>
+          </div>
         </NavLink>
       </li>
+      <h2 className={classes.heading}>Movies</h2>
       <li>
         <NavLink
           className={(navData) => (navData.isActive ? classes.active : "")}
@@ -49,14 +57,47 @@ const SideNav = ({ openNav }: Props) => (
           Top Rated
         </NavLink>
       </li>
-
+      <h2 className={classes.heading}>TV shows</h2>
       <li>
-        {/*<NavLink*/}
-        {/*  className={(navData) => (navData.isActive ? classes.active : "")}*/}
-        {/*  to="/popularpeople"*/}
-        {/*>*/}
-        {/*  Popular People*/}
-        {/*</NavLink>*/}
+        <NavLink
+          className={(navData) => (navData.isActive ? classes.active : "")}
+          to="/popularpeople"
+        >
+          Popular Shows
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={(navData) => (navData.isActive ? classes.active : "")}
+          to="/popularpeople"
+        >
+          Airing Today
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={(navData) => (navData.isActive ? classes.active : "")}
+          to="/popularpeople"
+        >
+          On TV
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={(navData) => (navData.isActive ? classes.active : "")}
+          to="/popularpeople"
+        >
+          Top Rated
+        </NavLink>
+      </li>
+      <h2 className={classes.heading}>People</h2>
+      <li>
+        <NavLink
+          className={(navData) => (navData.isActive ? classes.active : "")}
+          to="/popularpeople"
+        >
+          Popular People
+        </NavLink>
       </li>
     </ul>
   </nav>
