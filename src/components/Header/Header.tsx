@@ -31,7 +31,7 @@ const Header = ({ onClickNav }: Props) => {
         <div className={classes.navIcon} onClick={onClickNav}>
           <NavIcon />
         </div>
-        <img src={logo} alt={"app logo Icon"} className={classes.logo}></img>
+        <h1 className={classes.logo}>Show time</h1>
       </div>
       <form onSubmit={submitHandler}>
         <input
