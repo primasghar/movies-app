@@ -4,7 +4,6 @@ import { search } from "react-icons-kit/icomoon/search";
 import { useNavigate } from "react-router-dom";
 
 import Button from "../../shared/Button";
-import logo from "../../assets/images/logo-64px.png";
 import classes from "./Header.module.css";
 import NavIcon from "../../shared/Icon/NavIcon";
 
