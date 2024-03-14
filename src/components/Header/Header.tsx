@@ -33,6 +33,7 @@ const Header = ({ onClickNav }: Props) => {
         <h1 className={classes.logo}>Show time</h1>
       </div>
       <form onSubmit={submitHandler}>
+        <label htmlFor="search" className={classes.searchLabel}>Search bar</label>
         <input
           type="text"
           id="search"
